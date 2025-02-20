@@ -1,0 +1,110 @@
+body{
+    background-color:black;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+    font-family: monospace;
+}
+.text{
+    color:goldenrod;
+    font-size:80px;
+    display:inline-block;
+    text-shadow: 0 0 10px palevioletred,0 0 20px goldenrod,0 0 40px salmon;
+    overflow:hidden;
+    white-space:nowrap;
+    width:0;
+    border-right: 2px solid goldenrod;
+    animation:typing 3s steps(14,end) infinite,blink 0.3s infinite,neon 2s infinite alternate;
+}
+@keyframes neon{
+    0%{color:white;
+    text-shadow: 0 0 10px hotpink,0 0 20px darkgoldenrod,0 0 40px chocolate;}
+    50%{color:white;
+        text-shadow: 0 0 10px orangered,0 0 20px purple,0 0 40px rgb(62, 2, 32);}
+        100%{color:white;
+            text-shadow: 0 0 10px rgb(75, 75, 4),0 0 20px cadetblue,0 0 40px peru;}
+}
+@keyframes typing{
+    from{width:0;}
+    to{width:14ch;}
+}
+@keyframes blink{
+    50%{border-color:transparent;}
+}
+.main{
+    height:400px;
+    width:500px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.loader{
+    height:80px;
+    width:80px;
+    position:relative;
+}
+.dot{
+    background-color: white;
+    height:15px;
+    width:15px;
+    border-radius:50%;
+    position:absolute;
+    animation:movedot 2s infinite linear;
+}
+.dot:nth-child(1) {
+    animation-delay: 0s;
+}
+.dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.dot:nth-child(4) {
+    animation-delay: 0.6s;
+}
+.dot:nth-child(5) {
+    animation-delay: 0.8s;
+}
+@keyframes movedot {
+    0% { transform: rotate(0deg) translateX(40px) rotate(0deg); }
+    25% { transform: rotate(90deg) translateX(40px) rotate(-90deg); }
+    50% { transform: rotate(180deg) translateX(40px) rotate(-180deg); }
+    75% { transform: rotate(270deg) translateX(40px) rotate(-270deg); }
+    100% { transform: rotate(360deg) translateX(40px) rotate(-360deg); }
+}
+.main1{
+    height:100px;
+    width:80%;
+}
+.lodc{
+    height:20px;
+    width:100%;
+    border:2px solid white;
+    border-radius:20px;
+}
+.lodb{
+    height:100%;
+    width:0;
+    animation:loading 2s linear forwards;
+    background-color: green;
+    border-radius: 20px;;
+}
+@keyframes loading {
+    from{width:0;}
+    to{width:100%;}
+    
+}
+.text1{
+    height:20px;
+    width:280px;
+    color:goldenrod;
+    font-size: larger;
+}
+
+a{
+    color:goldenrod;
+    font-size:20px;
+}
